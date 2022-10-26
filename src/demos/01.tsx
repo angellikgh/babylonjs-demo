@@ -143,7 +143,6 @@ HostRegistrationStore.Register({
 });
 
 const App = (props: any) => {
-  console.log('dbg', props)
   return (
     <div className="App-header">
       <Engine

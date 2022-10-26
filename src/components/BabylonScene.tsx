@@ -65,7 +65,7 @@ export default class Scene extends React.Component<SceneProps & React.HTMLAttrib
   render() {
     // 'rest' can contain additional properties that you can flow through to canvas:
     // (id, className, etc.)
-    let { width, height, ...rest } = this.props;
+    let { width, height } = this.props;
 
     let opts: any = {};
 

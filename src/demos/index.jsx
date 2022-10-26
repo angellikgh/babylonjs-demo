@@ -7,7 +7,10 @@ const Main = () => {
         <Link to="/demo01">01. Rectangle</Link>
       </li>
       <li>
-        <Link to="/demo02">02. House</Link>
+        <Link to="/demo02">02. House (loadedModel)</Link>
+      </li>
+      <li>
+        <Link to="/demo03">03. House</Link>
       </li>
     </ul>
   );
