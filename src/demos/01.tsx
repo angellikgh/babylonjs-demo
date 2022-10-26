@@ -1,5 +1,3 @@
-import { FC } from 'react';
-
 import '@babylonjs/core/Physics/physicsEngineComponent'; // side-effect adds scene.enablePhysics function
 import '@babylonjs/core/Lights/Shadows/shadowGeneratorSceneComponent'; // side-effect for shadow generator
 import { CannonJSPlugin } from '@babylonjs/core/Physics/Plugins';
@@ -17,17 +15,26 @@ import {
   checkTextureDiff,
   checkPrimitiveDiff,
   checkVector3Diff,
+  PropertyUpdate,
 } from 'react-babylonjs';
 
 import * as CANNON from 'cannon';
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'gridMaterial': any;
+    }
+  }
+}
 
 window.CANNON = CANNON;
 
 const gravityVector = new Vector3(0, -9.81, 0);
 
 class GridMaterialPropsHandler {
-  getPropertyUpdates(oldProps, newProps) {
-    const changedProps = [];
+  getPropertyUpdates(oldProps: any, newProps: any) {
+    const changedProps: PropertyUpdate[] = [];
     checkColor3Diff(
       oldProps.mainColor,
       newProps.mainColor,
@@ -87,6 +94,8 @@ class GridMaterialPropsHandler {
 }
 
 class FiberGridMaterial {
+  propsHandlers: any = null
+
   constructor() {
     this.propsHandlers = [
       new GridMaterialPropsHandler(),
@@ -99,7 +108,7 @@ class FiberGridMaterial {
     return this.propsHandlers;
   }
 
-  addPropsHandler(propHandler) {
+  addPropsHandler(propHandler: any) {
     this.propsHandlers.push(propHandler);
   }
 }
@@ -133,7 +142,8 @@ HostRegistrationStore.Register({
   },
 });
 
-const App = () => {
+const App = (props: any) => {
+  console.log('dbg', props)
   return (
     <div className="App-header">
       <Engine
