@@ -46,8 +46,10 @@ const App = () => {
 
           <Ground />
 
-          <Roof />
-          <Body />
+          <mesh name="house">
+            <Roof />
+            <Body />
+          </mesh>
         </Scene>
       </Engine>
     </div >
