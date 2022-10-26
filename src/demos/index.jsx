@@ -12,6 +12,9 @@ const Main = () => {
       <li>
         <Link to="/demo03">03. House</Link>
       </li>
+      <li>
+        <Link to="/demo04">04. Street</Link>
+      </li>
     </ul>
   );
 };

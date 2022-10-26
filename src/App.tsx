@@ -7,6 +7,7 @@ import Main from './demos'
 import Demo01 from './demos/01'
 import Demo02 from './demos/02'
 import Demo03 from './demos/chapter2/03'
+import Demo04 from './demos/chapter2/04'
 
 const App: FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: FC = () => {
           <Route path="/demo01" element={<Demo01 />}></Route>
           <Route path="/demo02" element={<Demo02 />}></Route>
           <Route path="/demo03" element={<Demo03 />}></Route>
+          <Route path="/demo04" element={<Demo04 />}></Route>
 
           <Route path="*" element={<Navigate replace to="/demo01" />} />
         </Routes>
