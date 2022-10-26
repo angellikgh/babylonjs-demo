@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
   text-align: center;
 }
@@ -34,8 +38,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-#sample-canvas {
-  width: 50%;
 }
