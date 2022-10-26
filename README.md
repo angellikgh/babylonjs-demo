@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Getting Started with Babylon.js
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [react-babylonjs](https://github.com/brianzinn/react-babylonjs).
 
 ## Available Scripts
 
